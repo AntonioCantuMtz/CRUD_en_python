@@ -12,7 +12,31 @@ miFrame = Frame(raiz, width=400, height=550)#Frame() viene siendo una hoja inter
 miFrame.config(bg="#34495E")
 miFrame.pack() #.pack() sirve para... 
 
-#--------------- Barra de menu --------------- 
+#-------------------- Barra de menu -------------------- 
+barraMenu = Menu(raiz)
+raiz.config(menu=barraMenu)
+#Elementos del menu
+ddbbMenu = Menu(barraMenu, tearoff=0)#El tearoff es lagrima y al igualarla a 0 le quitamos ese separador que se ve mal
+borrarMenu = Menu(barraMenu, tearoff=0)
+crudMenu = Menu(barraMenu, tearoff=0)
+ayudaMenu = Menu(barraMenu, tearoff=0)
+#Opciones
+barraMenu.add_cascade(label="DDBB", menu=ddbbMenu)
+barraMenu.add_cascade(label="Borrar", menu=borrarMenu)
+barraMenu.add_cascade(label="CRUD", menu=crudMenu)
+barraMenu.add_cascade(label="Ayuda", menu=ayudaMenu)
+#Sub opciones
+ddbbMenu.add_command(label="Conectar")
+ddbbMenu.add_separator()#Esto es un separador
+ddbbMenu.add_command(label="Salir")
+borrarMenu.add_command(label="Borrar campos")
+crudMenu.add_command(label="Crear")
+crudMenu.add_command(label="Leer")
+crudMenu.add_command(label="Actualizar")
+crudMenu.add_command(label="Borrar")
+ayudaMenu.add_command(label="Licencia")
+ayudaMenu.add_command(label="Acerca de...")
+
 
 
 
