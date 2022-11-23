@@ -55,10 +55,26 @@ labelComentarios.place(x=50, y=270)
 
 #-------------------- Cuadros de texto -------------------- 
 cuadroId = Entry(miFrame)
-cuadroId.place(x=150, y=70)
-
+cuadroId.place(x=200, y=70)
+cuadroNombre = Entry(miFrame)
+cuadroNombre.place(x=200, y=110)
+cuadroApellido = Entry(miFrame)
+cuadroApellido.place(x=200, y=150)
+cuadroDireccion = Entry(miFrame)
+cuadroDireccion.place(x=200, y=190)
+cuadroPassword = Entry(miFrame)
+cuadroPassword.place(x=200, y=230)
+#Cuadro de comentarios
+cuadroComentarios = Text(miFrame, width=18, height=6)
+cuadroComentarios.place(x=200, y=270)
+#Con el command= y .yview le decimos que el scroll debe estar posicionado de manera vertical 
+# y dentro del objeto cuadroComentarios
+scrollComentarios = Scrollbar(miFrame, command=cuadroComentarios.yview) 
+scrollComentarios.place(x=350, y=270)
+cuadroComentarios.config(yscrollcommand=scrollComentarios.set)
 
 #-------------------- Botones -------------------- 
+
 
 
 raiz.mainloop()#Este metodo se queda esperando a que el usuario le pase un dato
