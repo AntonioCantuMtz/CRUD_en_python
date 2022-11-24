@@ -8,7 +8,7 @@ raiz.resizable(False,False)#Para que no se pueda alterar el ancho y largo de la 
 raiz.iconbitmap("C:/Users/anton/OneDrive/Escritorio/Curso de Python/Video 59 - Practica guiada I/icono.ico")
 
 #--------------- Frame --------------- 
-miFrame = Frame(raiz, width=400, height=550)#Frame() viene siendo una hoja interna sobre la cual ahora si ponemos los elementos que conforman nuestra interface
+miFrame = Frame(raiz, width=400, height=500)#Frame() viene siendo una hoja interna sobre la cual ahora si ponemos los elementos que conforman nuestra interface
 miFrame.config(bg="#34495E")
 miFrame.pack() #.pack() sirve para... empaquetar el Frame en la raiz CREO xD
 
@@ -74,7 +74,13 @@ scrollComentarios.place(x=350, y=270)
 cuadroComentarios.config(yscrollcommand=scrollComentarios.set)
 
 #-------------------- Botones -------------------- 
-
-
+botonCrear = Button(miFrame, text="   Crear  ", borderwidth=1) #el borderwidth=1 es para redondear mas el borde
+botonCrear.place(x=50, y=400)
+botonLeer = Button(miFrame, text="   Leer   ", borderwidth=1)
+botonLeer.place(x=130, y=400)
+botonBorrar = Button(miFrame, text="  Borrar  ", borderwidth=1)
+botonBorrar.place(x=210, y=400)
+botonActualizar = Button(miFrame, text="Actualizar", borderwidth=1)
+botonActualizar.place(x=290, y=400)
 
 raiz.mainloop()#Este metodo se queda esperando a que el usuario le pase un dato
